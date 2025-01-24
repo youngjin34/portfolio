@@ -1,0 +1,18 @@
+.Home {
+  width: 50%;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 56px;
+}
+
+.content {
+  font-size: 18px;
+  line-height: 28px;
+  width: 70%;
+}
+
+.bold {
+  font-weight: bold;
+}

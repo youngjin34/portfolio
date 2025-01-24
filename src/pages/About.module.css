@@ -1,0 +1,42 @@
+.About {
+  width: 50%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.line {
+  width: 50%;
+  height: 1px;
+  background-color: #ccc; /* 선의 색상 */
+}
+
+.content {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0px 20px;
+}
+
+.github {
+  color: black;
+}
+
+h2 {
+  width: 180px;
+}
+
+h4 {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.padding {
+  padding-bottom: 20px;
+}
