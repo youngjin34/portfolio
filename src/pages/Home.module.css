@@ -1,18 +1,88 @@
 .Home {
   width: 50%;
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 0 20px; /* 여백 추가 */
 }
 
 .name {
   font-weight: bold;
-  font-size: 56px;
+  font-size: clamp(32px, 8vw, 56px); /* 화면 크기에 맞춰 글자 크기 조정 */
+  text-align: left; /* 이름을 중앙 정렬 */
+  margin-bottom: 20px; /* 이름 아래 여백 추가 */
 }
 
 .content {
-  font-size: 18px;
+  font-size: clamp(16px, 4vw, 18px); /* 글자 크기 자동 조정 */
   line-height: 28px;
-  width: 70%;
+  width: 80%; /* 모바일 화면에 맞춰 100%로 확장 */
+  text-align: left; /* 모바일에서 중앙 정렬 */
 }
 
 .bold {
   font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 5px; /* 선과 제목 간 간격 */
+}
+
+.content {
+  font-size: clamp(14px, 3vw, 16px); /* 화면 크기에 맞게 글자 크기 조정 */
+  line-height: 24px;
+  padding: 0 20px;
+  text-align: left; /* 모바일에서도 왼쪽 정렬 */
+}
+
+.github {
+  color: black;
+}
+
+h2 {
+  width: 180px;
+  font-size: clamp(20px, 5vw, 24px); /* 화면 크기에 맞춰 글자 크기 */
+}
+
+@media screen and (max-width: 768px) {
+  .Home {
+    width: 90%; /* 모바일 화면에 맞춰 width 조정 */
+  }
+
+  .name {
+    font-size: clamp(28px, 6vw, 48px); /* 모바일에서도 적당한 크기 유지 */
+  }
+
+  .content {
+    font-size: clamp(
+      14px,
+      4vw,
+      16px
+    ); /* 더 작은 화면에서 글자 크기 자동 조정 */
+    line-height: 24px; /* 모바일에서 읽기 편한 라인 높이 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .name {
+    font-size: clamp(24px, 6vw, 40px); /* 모바일에서 글자 크기 더 작게 */
+  }
+
+  .content {
+    font-size: clamp(14px, 5vw, 16px); /* 더 작은 화면에서 적절한 글자 크기 */
+    line-height: 22px; /* 더 작은 화면에서 읽기 좋은 라인 높이 */
+  }
 }

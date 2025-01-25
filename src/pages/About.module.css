@@ -1,5 +1,7 @@
 .About {
   width: 50%;
+  margin: 0 auto;
+  padding: 0 20px; /* 여백 추가 */
 }
 
 a {
@@ -9,19 +11,22 @@ a {
 .display {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px; /* 항목 사이 간격을 조금 더 넓게 */
+  margin-bottom: 10px; /* 제목과 내용 간 여백 */
 }
 
 .line {
-  width: 50%;
+  width: 100%;
   height: 1px;
-  background-color: #ccc; /* 선의 색상 */
+  background-color: #ccc;
+  margin-top: 5px; /* 선과 제목 간 간격 */
 }
 
 .content {
-  font-size: 16px;
+  font-size: clamp(14px, 3vw, 18px); /* 화면 크기에 맞게 글자 크기 조정 */
   line-height: 24px;
-  padding: 0px 20px;
+  padding: 0 20px;
+  text-align: left; /* 모바일에서도 왼쪽 정렬 */
 }
 
 .github {
@@ -30,13 +35,57 @@ a {
 
 h2 {
   width: 180px;
+  font-size: clamp(20px, 5vw, 26px); /* 화면 크기에 맞춰 글자 크기 */
 }
 
 h4 {
+  font-size: clamp(16px, 4vw, 20px); /* 화면 크기에 맞춰 글자 크기 */
   margin-left: 10px;
   margin-bottom: 10px;
 }
 
 .padding {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .About {
+    width: 90%; /* 모바일 화면에 맞춰 width 조정 */
+  }
+
+  h2 {
+    font-size: 20px; /* 모바일에서 적당한 제목 크기 */
+  }
+
+  .display {
+    flex-direction: column;
+    align-items: flex-start; /* 작은 화면에서 제목과 내용을 세로로 배치 */
+  }
+
+  .line {
+    width: 100%;
+  }
+
+  .content {
+    font-size: 14px; /* 작은 화면에서 글자 크기 줄이기 */
+  }
+
+  h4 {
+    font-size: 16px; /* 작은 화면에서 글자 크기 줄이기 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 18px; /* 작은 화면에서 제목 크기 줄이기 */
+  }
+
+  .content {
+    font-size: 14px; /* 더 작은 화면에서 글자 크기 줄이기 */
+    line-height: 20px; /* 더 작은 화면에서 라인 높이 줄이기 */
+  }
+
+  h4 {
+    font-size: 14px; /* 더 작은 화면에서 글자 크기 줄이기 */
+  }
 }

@@ -1,8 +1,9 @@
 .container {
-  width: 50%;
+  width: 45%;
   display: flex;
   padding: 0 50px;
   margin-left: 100px;
+  justify-content: space-between; /* 공간 균등 배분 */
 }
 
 .slide {
@@ -44,38 +45,45 @@
   transition: opacity 0.3s ease-in 0.4s;
 }
 
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 768px) {
   .container {
-    display: flex;
-    height: 90vh;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 
   .slide {
-    width: 90vw;
-    border-radius: 20px;
-    margin: 10px;
-    cursor: pointer;
-    color: #fff;
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    transition: all 0.7s ease-in-out;
+    width: 90%;
+    height: 60vh; /* 높이를 화면 크기에 맞게 조정 */
+    margin-bottom: 20px; /* 슬라이드 간격 조정 */
     filter: blur(4px);
   }
 
+  .slide h3 {
+    font-size: clamp(1rem, 6vw, 4rem); /* 텍스트 크기 조정 */
+    left: 10px;
+    bottom: 10px;
+  }
+
   .slide.active {
-    flex: 10;
     filter: blur(0px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .slide {
+    height: 50vh; /* 더 작은 화면에서 슬라이드 높이 조정 */
   }
 
   .slide h3 {
-    left: 5px;
+    font-size: clamp(1rem, 8vw, 3rem); /* 더 작은 화면에서 텍스트 크기 조정 */
   }
 }

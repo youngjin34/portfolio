@@ -33,3 +33,26 @@
 .Navigation a.active::after {
   width: 100%; /* active 상태일 때 밑줄을 유지 */
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .Navigation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .Navigation a {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Navigation {
+    align-items: center;
+  }
+
+  .Navigation a {
+    font-size: 20px;
+  }
+}

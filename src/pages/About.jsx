@@ -1,34 +1,17 @@
-import { Link } from "react-router-dom";
-import style from "./About.module.css";
+import { Link } from 'react-router-dom';
+import style from './About.module.css';
 
 function About() {
   return (
     <div className={style.About}>
       <div className={`${style.padding} `}>
         <div className={`${style.display}`}>
-          <h2>CONTACT</h2>
-          <div className={`${style.line}`}></div>
-        </div>
-        <div className={style.content}>
-          • Email | epik35@naver.com
-          <br />
-          • Kakao | epik35@naver.com
-          <br />
-          • Phone | 010-7632-7186
-          <br />• Github |
-          <Link to="https://github.com/youngjin34" className={style.github}>
-            https://github.com/youngjin34
-          </Link>
-        </div>
-      </div>
-
-      <div className={`${style.padding} `}>
-        <div className={`${style.display}`}>
           <h2>EDUCATION</h2>
           <div className={`${style.line}`}></div>
         </div>
         <div className={style.content}>
-          • 가천대학교 컴퓨터공학과 <br />• 장애인 디지털 아카데미
+          • 가천대학교 컴퓨터공학과 <br />• 장애인 디지털 아카데미(Full-Stack
+          과정)
         </div>
       </div>
 
@@ -57,7 +40,7 @@ function About() {
         </div>
         <div className={style.content}>
           • Slack <br />
-          • VS Code
+          • VS Code, IntelliJ
           <br />
           • Git, Github
           <br />
