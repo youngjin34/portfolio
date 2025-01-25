@@ -7,4 +7,29 @@
   font-size: 28px;
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.Navigation a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: width 0.3s ease-in-out;
+}
+
+.Navigation a:hover::after {
+  width: 100%;
+}
+
+.Navigation a.active {
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+}
+
+.Navigation a.active::after {
+  width: 100%; /* active 상태일 때 밑줄을 유지 */
 }
