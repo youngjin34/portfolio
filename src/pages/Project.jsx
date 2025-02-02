@@ -335,7 +335,7 @@ function Project() {
                         alt={`Blog image ${idx + 1}`}
                         className={style.gallery_image}
                         onClick={() => handleImageClick(img)}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.2 }}
                       />
                     ))}
