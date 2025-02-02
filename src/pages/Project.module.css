@@ -1,9 +1,15 @@
 .Project {
-  width: 50%;
-  height: 75vh;
-  overflow-y: scroll;
+  width: 90%;
   margin: 0 auto;
-  padding: 0 20px; /* 여백 추가 */
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.Project > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
 }
 
 .display {
@@ -14,20 +20,13 @@
   margin-bottom: 20px;
 }
 
-.line {
-  width: 75%;
-  height: 1px;
-  background-color: #ccc; /* 선의 색상 */
-}
-
-h2 {
+.display > h2 {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
-}
-
-.project_list {
-  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .link_btn {
@@ -44,62 +43,124 @@ h2 {
 
 .link {
   font-size: 16px;
-  color: #007bff;
+  color: #fff;
+  background-color: #007bff;
   text-decoration: none;
   border: 1px solid #007bff;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .link:hover {
-  background-color: #007bff;
+  background-color: #0056b3;
   color: white;
+  transform: scale(1.05);
 }
 
-/* 작은 화면에서 글씨 크기와 패딩 조정 */
 @media (max-width: 768px) {
   .link {
     font-size: 14px;
-    padding: 6px 12px;
+    padding: 8px 16px;
   }
 }
 
-/* 더 작은 화면에서 버튼 크기 줄이기 */
 @media (max-width: 480px) {
   .link {
     font-size: 12px;
-    padding: 5px 10px;
+    padding: 6px 12px;
   }
 
   .link_btn {
-    gap: 5px; /* 버튼 사이 간격을 좁힘 */
+    gap: 5px;
   }
 }
 
 .project_container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* 카드 사이 간격 */
+  gap: 30px;
+}
+
+.project_card_wrapper {
+  width: 40%; /* 전체 너비의 90% */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* 카드들을 여러 줄로 감쌀 수 있도록 설정 */
+  justify-content: space-between; /* 카드 간에 여백을 두기 */
 }
 
 .project_card {
-  width: 90%;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 카드에 약간의 그림자 */
-  transition: transform 0.3s ease-in-out;
+  width: 100%; /* 두 개의 카드가 한 줄에 나와야 하므로 48%로 설정 */
+  margin: 10px 0; /* 카드 간의 간격 추가 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project_card:hover {
-  transform: translateY(-10px); /* 호버 시 카드가 약간 떠오르게 */
+  transform: translateY(-10px);
+}
+
+.project_name {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.project_details {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fafafa;
+  border-top: 2px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project_name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* 프로젝트 이름에 대문자 효과 */
+  letter-spacing: 1px; /* 글자 간격 */
+}
+
+.project_description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  text-align: justify; /* 텍스트 정렬을 양쪽 맞춤으로 */
+}
+
+.project_duration {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  text-align: right; /* 개발 기간을 오른쪽 정렬 */
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .project_card {
+    width: 45%; /* 768px 이하에서 카드가 두 개씩 나열되도록 설정 */
+  }
+}
+
+@media (max-width: 480px) {
+  .project_card {
+    width: 100%; /* 모바일에서는 한 줄에 하나씩 카드 표시 */
+  }
 }
 
 .project_img {
-  width: 100%; /* 이미지가 카드 크기에 맞게 */
+  width: 100%;
   height: auto;
   cursor: pointer;
   transform: scale(1);
@@ -107,7 +168,7 @@ h2 {
 }
 
 .project_img:hover {
-  transform: scale(1.1); /* 호버 시 이미지 확대 */
+  transform: scale(1.01);
 }
 
 /* Modal Overlay */
@@ -205,7 +266,7 @@ h2 {
   cursor: pointer;
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 

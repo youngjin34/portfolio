@@ -1,24 +1,66 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import style from "./App.module.css";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import ImageSlide from "./components/ImageSlide";
-import About from "./pages/About";
-import Project from "./pages/Project";
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import style from './App.module.css';
+import Header from './components/Header';
+import Home from './pages/Home';
+import About from './pages/About';
+import Project from './pages/Project';
+import Introduce from './pages/Introduce';
 
 function App() {
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <BrowserRouter>
+    <Router>
       <Header />
-      <div className={`${style.App}`}>
-        <ImageSlide />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Project />} />
-        </Routes>
+      <div className={style.App}>
+        <div id="home" className={style.section}>
+          <Home />
+        </div>
+        <div id="introduce" className={style.section}>
+          <Introduce />
+        </div>
+        <div id="about" className={style.section}>
+          <About />
+        </div>
+        <div id="project" className={style.section}>
+          <Project />
+        </div>
       </div>
-    </BrowserRouter>
+
+      {/* 최상단으로 가는 버튼 */}
+      <button
+        className={`${style.scrollToTopButton} ${
+          showScrollToTop ? style.show : ''
+        }`}
+        onClick={scrollToTop}
+      >
+        ↑ Top
+      </button>
+    </Router>
   );
 }
 

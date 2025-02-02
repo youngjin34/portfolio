@@ -1,5 +1,10 @@
 .Header {
   padding: 30px;
+  padding-bottom: 0px;
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+  width: 100%;
 }
 
 .navigation {
@@ -20,6 +25,7 @@ hr {
   background-color: #fff;
   padding: 0;
   margin: 30px;
+  margin-bottom: 0px;
 }
 
 hr.hr_1 {

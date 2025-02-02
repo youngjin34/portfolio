@@ -1,0 +1,34 @@
+.Introduce {
+  width: 63%;
+  margin: 0 auto; /* 중앙 정렬 및 여백 추가 */
+  padding: 20px;
+  padding-top: 80px;
+  line-height: 1.8; /* 가독성 향상 */
+}
+
+.Introduce > h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.Introduce > h2 {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  padding-top: 0px;
+}
+
+.Introduce p {
+  font-size: 18px;
+  color: #555;
+}
+
+.Introduce strong {
+  color: #007bff;
+}
+
+.Introduce h3 {
+  font-size: 1.5rem;
+  color: #ff6600;
+}

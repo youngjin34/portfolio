@@ -1,7 +1,13 @@
 .About {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px; /* 여백 추가 */
+  padding-top: 80px;
+}
+
+.About > h1 {
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 a {
@@ -20,6 +26,12 @@ a {
   height: 1px;
   background-color: #ccc;
   margin-top: 5px; /* 선과 제목 간 간격 */
+}
+
+.stack_container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
 }
 
 .content {
@@ -93,36 +105,19 @@ h4 {
 /* Skill Bar 스타일 */
 .skillContainer {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-left: 20px;
 }
 
-.skill {
-  margin-left: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 50%;
+.gauge {
+  width: 100px;
+  text-align: center;
 }
 
-.skill span {
-  width: 120px;
+.gauge p {
+  margin-top: 10px;
+  font-size: 14px;
   font-weight: bold;
-}
-
-.bar {
-  flex-grow: 1;
-  height: 10px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  margin-left: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.fill {
-  height: 100%;
-  background-color: #4caf50; /* 연한 초록색 */
-  transition: width 0.5s ease-in-out;
-  border-radius: 5px;
 }

@@ -1,8 +1,6 @@
 .container {
-  width: 45%;
+  width: 110%;
   display: flex;
-  padding: 0 50px;
-  margin-left: 100px;
   justify-content: space-between; /* 공간 균등 배분 */
 }
 

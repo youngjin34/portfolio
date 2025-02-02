@@ -1,18 +1,57 @@
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 body {
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
   margin: 0;
 }
 
 .App {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 170px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* 최상단으로 가는 버튼 스타일 */
+.scrollToTopButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* 그라디언트 색상 */
+  color: white;
+  border: none;
+  padding: 15px 15px; /* 버튼 크기 조정 */
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0; /* 초기 상태는 투명 */
+  transition: opacity 0.5s ease, transform 0.3s ease; /* 서서히 나타나고, 클릭 시 약간의 애니메이션 */
+  pointer-events: none; /* 처음엔 클릭을 비활성화 */
+  z-index: 1000; /* 화면 위에 항상 위치하도록 */
+  border-radius: 5px; /* 둥근 모서리 */
+}
+
+.scrollToTopButton:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb); /* 호버 시 색상 반전 */
+  transform: scale(1.1); /* 호버 시 버튼 커짐 */
+}
+
+.scrollToTopButton:focus {
+  outline: none;
+}
+
+/* 버튼이 표시될 때 opacity를 1로 변경 */
+.scrollToTopButton.show {
+  opacity: 1;
+  pointer-events: auto; /* 표시될 때 클릭 가능 */
 }

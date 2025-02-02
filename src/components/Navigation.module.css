@@ -1,6 +1,7 @@
 .Navigation {
   display: flex;
   gap: 30px;
+  margin-right: 100px;
 }
 
 .Navigation a {
@@ -8,6 +9,7 @@
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
   position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .Navigation a::after {
@@ -25,13 +27,19 @@
   width: 100%;
 }
 
+.Navigation a:hover {
+  color: rgba(0, 0, 0, 1);
+  transform: translateY(-2px);
+}
+
 .Navigation a.active {
   color: rgba(0, 0, 0, 1);
   font-weight: bold;
+  transform: translateY(-3px);
 }
 
 .Navigation a.active::after {
-  width: 100%; /* active 상태일 때 밑줄을 유지 */
+  width: 100%;
 }
 
 /* Media Queries for Responsiveness */
