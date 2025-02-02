@@ -5,25 +5,26 @@ function Introduce() {
   return (
     <div className={style.Introduce}>
       <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ x: -100 }}
+        animate={{ x: 0 }}
         transition={{ duration: 0.8 }}
       >
         INTRODUCE
       </motion.h1>
+
       <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
       >
         안녕하세요! <br /> 저는 웹 개발에 대한 열정을 가지고 끊임없이 성장하고
         있는 프론트엔드 개발자 <strong>서영진</strong>입니다.
       </motion.h2>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.4 }}
       >
         "공부를 즐기는 개발자"라는 모토 아래, 저는 항상 새로운 기술을 배우고, 더
         나은 개발자가 되기 위해 노력하고 있습니다. 웹 개발에 대한 흥미는 어렸을
@@ -32,9 +33,9 @@ function Introduce() {
       </motion.p>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.6 }}
       >
         저는 <strong>React</strong>, <strong>JavaScript</strong>,{' '}
         <strong>HTML</strong>, <strong>CSS</strong>를 주로 사용하여 웹
@@ -45,17 +46,17 @@ function Introduce() {
       </motion.p>
 
       <motion.h3
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.7 }}
+        initial={{ rotate: -20, opacity: 0 }}
+        animate={{ rotate: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.8 }}
       >
         📚 배운 것과 더 배우고 싶은 것
       </motion.h3>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
       >
         저는 개발에 있어서 중요한 것은 "끊임없이 배우고 도전하는 것"이라고
         생각합니다. 새로운 라이브러리나 프레임워크를 학습하고, 다양한 문제를
@@ -66,17 +67,17 @@ function Introduce() {
       </motion.p>
 
       <motion.h3
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.3 }}
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
       >
         💬 나의 목표
       </motion.h3>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.5 }}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1.4 }}
       >
         저는 팀워크와 소통을 중요하게 생각하며, 항상 다른 개발자들과 협력하며
         서로 배우고 성장하는 환경을 선호합니다. 개발자로서 끊임없이 성장하고 더
@@ -86,17 +87,17 @@ function Introduce() {
       </motion.p>
 
       <motion.h3
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.8 }}
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1.6 }}
       >
         🌱 자신에게 주는 한 마디
       </motion.h3>
 
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 2 }}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1.8 }}
       >
         “배우는 것이 즐거운 삶을 만든다.” 저는 공부를 단순히 필수적인 과제가
         아니라, 즐기면서 할 수 있는 기회로 여깁니다. 매일 새로운 것을 배우고 그

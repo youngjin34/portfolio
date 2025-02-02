@@ -1,16 +1,39 @@
 import { Link } from 'react-router-dom';
 import ImageSlide from '../components/ImageSlide';
 import style from './Home.module.css';
+import { motion } from 'framer-motion'; // framer-motion 추가
 
 function Home() {
   return (
     <div className={style.Home}>
-      <div className={style.imageSlide}>
+      {/* ImageSlide 부분에 애니메이션 추가 */}
+      <motion.div
+        className={style.imageSlide}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <ImageSlide />
-      </div>
+      </motion.div>
+
       <div className={style.textContent}>
-        <div className={style.name}>SEO YOUNGJIN</div>
-        <p className={style.content}>
+        {/* 이름 부분에 애니메이션 추가 */}
+        <motion.div
+          className={style.name}
+          initial={{ x: -200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          SEO YOUNGJIN
+        </motion.div>
+
+        {/* 내용 부분에 애니메이션 추가 */}
+        <motion.p
+          className={style.content}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.2 }}
+        >
           🚀 끝없는 도전과 성장을 추구하는 서영진입니다! <br />
           <span className={style.bold}>리액트</span>를 중심으로 한 프론트엔드
           개발에 열정을 가지고 있으며,{' '}
@@ -24,12 +47,19 @@ function Home() {
           <br />
           💡 "가능성은 도전하는 자의 것"이라는 신념으로 매 순간 성장하며,
           창의적인 아이디어를 코드와 디자인으로 실현하고자 합니다. <br />
-        </p>
+        </motion.p>
 
-        <div className={`${style.display}`}>
+        {/* CONTACT 부분에 애니메이션 추가 */}
+        <motion.div
+          className={style.display}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <h2>CONTACT</h2>
           <div className={`${style.line}`}></div>
-        </div>
+        </motion.div>
+
         <div className={style.content}>
           • Email | epik35@naver.com
           <br />
@@ -37,13 +67,23 @@ function Home() {
           <br />
           • Phone | 010-7632-7186
           <br />• Github |
-          <Link to="https://github.com/youngjin34" className={style.github}>
+          <a
+            href="https://github.com/youngjin34"
+            className={style.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             &nbsp;https://github.com/youngjin34
-          </Link>{' '}
+          </a>{' '}
           <br />• Velog |
-          <Link to="https://velog.io/@epik34/posts" className={style.github}>
+          <a
+            href="https://velog.io/@epik34/posts"
+            className={style.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             &nbsp;https://velog.io/@epik34/posts
-          </Link>
+          </a>
         </div>
       </div>
     </div>
