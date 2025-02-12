@@ -58,9 +58,10 @@ function Introduce() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        저는 개발에 있어서 중요한 것은 "끊임없이 배우고 도전하는 것"이라고
-        생각합니다. 새로운 라이브러리나 프레임워크를 학습하고, 다양한 문제를
-        해결하면서 성장하는 과정을 즐깁니다. 앞으로도{' '}
+        저는 개발에 있어서 중요한 것은
+        <strong>"끊임없이 배우고 도전하는 것"</strong>
+        이라고 생각합니다. 새로운 라이브러리나 프레임워크를 학습하고, 다양한
+        문제를 해결하면서 성장하는 과정을 즐깁니다. 앞으로도{' '}
         <strong>TypeScript</strong>, <strong>NextJS</strong>,
         <strong> 웹 성능 최적화</strong>, <strong>CI/CD</strong>와 같은 분야에
         대해 더 깊이 공부할 계획입니다.
