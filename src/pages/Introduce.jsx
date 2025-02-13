@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import style from './Introduce.module.css';
+import { motion } from "framer-motion";
+import style from "./Introduce.module.css";
 
 function Introduce() {
   return (
@@ -26,10 +26,10 @@ function Introduce() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, delay: 0.4 }}
       >
-        "공부를 즐기는 개발자"라는 모토 아래, 저는 항상 새로운 기술을 배우고, 더
-        나은 개발자가 되기 위해 노력하고 있습니다. 웹 개발에 대한 흥미는 어렸을
-        때부터 시작되었고, 그 관심은 시간이 지날수록 깊어져 지금의 제 직업을
-        선택하게 되었습니다.
+        <strong>"공부를 즐기는 개발자"</strong>라는 모토 아래, 저는 항상 새로운
+        기술을 배우고, 더 나은 개발자가 되기 위해 노력하고 있습니다. 웹 개발에
+        대한 흥미는 어렸을 때부터 시작되었고, 그 관심은 시간이 지날수록 깊어져
+        지금의 제 직업을 선택하게 되었습니다.
       </motion.p>
 
       <motion.p
@@ -37,7 +37,7 @@ function Introduce() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
       >
-        저는 <strong>React</strong>, <strong>JavaScript</strong>,{' '}
+        저는 <strong>React</strong>, <strong>JavaScript</strong>,{" "}
         <strong>HTML</strong>, <strong>CSS</strong>를 주로 사용하여 웹
         애플리케이션을 개발하고 있습니다. 그동안 다양한 프로젝트에 참여하며,
         사용자 경험(UX)과 인터페이스(UI)의 중요성을 깨달았고, 이를 바탕으로
@@ -60,7 +60,7 @@ function Introduce() {
       >
         저는 개발에 있어서 중요한 것은 "끊임없이 배우고 도전하는 것"이라고
         생각합니다. 새로운 라이브러리나 프레임워크를 학습하고, 다양한 문제를
-        해결하면서 성장하는 과정을 즐깁니다. 앞으로도{' '}
+        해결하면서 성장하는 과정을 즐깁니다. 앞으로도{" "}
         <strong>TypeScript</strong>, <strong>NextJS</strong>,
         <strong> 웹 성능 최적화</strong>, <strong>CI/CD</strong>와 같은 분야에
         대해 더 깊이 공부할 계획입니다.

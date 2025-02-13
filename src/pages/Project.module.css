@@ -323,43 +323,72 @@ ul {
 .details_container {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* 각 카드 간의 간격 */
+  gap: 1.5rem; /* 각 카드 간의 간격 */
+  padding: 1rem; /* 컨테이너 내부 여백 */
 }
 
 /* 각 항목을 카드 형태로 */
 .detail_card {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #f5f5f5;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
+  flex-direction: column;
+  gap: 1rem; /* 각 요소 간의 간격 */
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
+/* 카드 hover 효과 */
 .detail_card:hover {
-  background: #e8e8e8;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* 아이콘 스타일 */
 .detail_icon {
-  font-size: 20px;
+  font-size: 24px;
   color: #4caf50; /* 아이콘 색상 */
+  margin-right: 8px;
 }
 
+/* 타이틀 스타일 */
 .detail_title {
   font-weight: bold;
-  font-size: 1rem;
-  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  color: #333; /* 글자 색상 */
 }
 
+/* Troubleshooting 부분 */
+.troubleshooting {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  border-left: 4px solid #ff0000;
+}
+
+/* My Role 부분 */
+.role {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  border-left: 4px solid #2196f3;
+}
+
+/* 세부사항 (Details) */
 .sub_details {
-  font-size: 1.2rem;
-  margin: 0.2rem 0 0 0; /* 타이틀과 간격 */
+  font-size: 1rem;
+  line-height: 1.5;
   color: #666;
+  margin-top: 0.5rem;
 }
 
 /* 반응형 디자인 */
